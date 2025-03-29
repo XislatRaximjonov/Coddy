@@ -63,3 +63,20 @@ function mapJuftlik <T, U> (arr3:T[], arr4:U[]): [T, U][] {
 const sonlar2 = mapJuftlik([1, 2, 3, 4, 5], ["Salom", "Dunyo", "Olim aka", "Kola bomi","Eshmat aka"]);
 
 console.log(sonlar2);
+
+function uzunlikHisobot1<T extends Uzunlik>(obj: T): void {
+  console.log(obj.length);
+  
+ }
+ 
+ 
+ uzunlikHisobot("Salom"); // Error
+ uzunlikHisobot([1,2,3,4,5])
+ 
+ function mapJuftlik1 <T, U> (arr3:T[], arr4:U[]): [T, U][] {
+   return arr3.map((item, index) => [item, arr4[index]]);
+ } 
+ 
+ const sonlar22 = mapJuftlik1([1, 2, 3, 4, 5], ["Salom", "Dunyo", "Olim aka", "Kola bomi","Eshmat aka"]);
+ 
+ console.log(sonlar22);
